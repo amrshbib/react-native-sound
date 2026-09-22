@@ -1,0 +1,9 @@
+node_modules/
+android/build/
+android/.gradle/
+ios/build/
+*.log
+.DS_Store
+
+# The local tarball the app installs from until this is published.
+*.tgz

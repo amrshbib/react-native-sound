@@ -1,0 +1,51 @@
+buildscript {
+  if (project == rootProject) {
+    repositories {
+      google()
+      mavenCentral()
+    }
+    dependencies {
+      classpath "com.android.tools.build:gradle:8.6.1"
+      classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:2.1.20"
+    }
+  }
+}
+
+def safeExtGet(prop, fallback) {
+  rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
+}
+
+apply plugin: 'com.android.library'
+apply plugin: 'org.jetbrains.kotlin.android'
+
+android {
+  namespace "com.amrshbib.sound"
+  compileSdkVersion Math.max(safeExtGet('compileSdkVersion', 34) as Integer, 34)
+
+  defaultConfig {
+    // The same floor the haptics package takes, and for a duller reason: the `FX_KEYPRESS_*`
+    // effects this maps onto arrived in API 19, so anything this library runs on already has
+    // all five.
+    minSdkVersion safeExtGet('minSdkVersion', 24)
+    targetSdkVersion safeExtGet('targetSdkVersion', 34)
+  }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_17
+    targetCompatibility JavaVersion.VERSION_17
+  }
+
+  kotlinOptions {
+    jvmTarget = "17"
+  }
+}
+
+repositories {
+  google()
+  mavenCentral()
+}
+
+dependencies {
+  implementation "com.facebook.react:react-native:+"
+  implementation "androidx.annotation:annotation:1.7.1"
+}

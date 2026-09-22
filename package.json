@@ -1,0 +1,53 @@
+{
+  "name": "@amrshbib/react-native-sound",
+  "version": "0.0.1",
+  "description": "Semantic UI sounds for React Native. The system's own keyboard and feedback sounds, named for what happened — a tick, an untick, a refusal. No audio files, no audio session, no bundle weight.",
+  "main": "src/index.js",
+  "types": "index.d.ts",
+  "react-native": "src/index.js",
+  "sideEffects": false,
+  "files": [
+    "src",
+    "android/build.gradle",
+    "android/src",
+    "ios",
+    "index.d.ts",
+    "react-native-sound.podspec",
+    "LICENSE",
+    "README.md",
+    "!android/build",
+    "!android/.gradle",
+    "!ios/build"
+  ],
+  "keywords": [
+    "react-native",
+    "sound",
+    "sounds",
+    "sound-effect",
+    "ui-sounds",
+    "system-sound",
+    "click",
+    "tick",
+    "keypress",
+    "feedback",
+    "ios",
+    "android"
+  ],
+  "author": "Amr Shbib <amr.shbib@mythings.app>",
+  "license": "MIT",
+  "homepage": "https://github.com/amrshbib/react-native-sound#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amrshbib/react-native-sound.git"
+  },
+  "bugs": {
+    "url": "https://github.com/amrshbib/react-native-sound/issues"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": ">=0.71.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Deliberately empty. The haptics package beside this one has to merge in VIBRATE;
+         `AudioManager.playSoundEffect` needs nothing at all, because the sound is the system's
+         own and is played by the system on the system's own stream. Nothing to add to the host
+         app, and nothing that shows on a store listing. -->
+
+</manifest>
